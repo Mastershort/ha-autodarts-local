@@ -1,0 +1,11 @@
+{
+  "domain": "autodarts_local",
+  "name": "Autodarts Local",
+  "version": "1.0.0",
+  "description": "Lokale Integration für Autodarts Boards",
+  "config_flow": true,
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [],
+  "iot_class": "local_polling"
+}
