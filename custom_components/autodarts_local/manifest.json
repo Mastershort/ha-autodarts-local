@@ -1,7 +1,7 @@
 {
   "domain": "autodarts_local",
   "name": "Autodarts Local",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lokale Integration für Autodarts Boards",
   "config_flow": true,
   "requirements": [],

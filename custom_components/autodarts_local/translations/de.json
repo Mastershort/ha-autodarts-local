@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Mit Autodarts verbinden",
+        "description": "Bitte gib die IP-Adresse deines Autodarts-Boards ein (Lokale API).",
+        "data": {
+          "api_ip": "IP-Adresse",
+          "api_port": "Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung fehlgeschlagen",
+      "unknown": "Unerwarteter Fehler"
+    },
+    "abort": {
+      "already_configured": "Gerät ist bereits konfiguriert"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": { "name": "Status" },
+      "turn_score": { "name": "Aktuelle Aufnahme" },
+      "num_throws": { "name": "Anzahl Würfe" },
+      "connection_status": { "name": "Verbindung" },
+      "throw1": { "name": "Wurf 1" },
+      "throw2": { "name": "Wurf 2" },
+      "throw3": { "name": "Wurf 3" }
+    }
+  }
+}

@@ -7,16 +7,15 @@ async def async_setup_entry(hass, entry, async_add_entities):
     """Sensoren initialisieren."""
     coordinator = hass.data[DOMAIN][entry.entry_id]
 
+    # Hier übergeben wir KEINEN Namen mehr, nur noch den Key (z.B. "status")
     sensors = [
-        # Der neue Sensor für Online/Offline
-        AutodartsSensor(coordinator, "connection_status", "Verbindung", "mdi:wifi-check"),
-        
-        AutodartsSensor(coordinator, "status", "Status", "mdi:state-machine"),
-        AutodartsSensor(coordinator, "turn_score", "Aktuelle Aufnahme", "mdi:bullseye-arrow"),
-        AutodartsSensor(coordinator, "num_throws", "Anzahl Würfe", "mdi:counter"),
-        AutodartsSensor(coordinator, "throw1", "Wurf 1", "mdi:numeric-1-circle-outline"),
-        AutodartsSensor(coordinator, "throw2", "Wurf 2", "mdi:numeric-2-circle-outline"),
-        AutodartsSensor(coordinator, "throw3", "Wurf 3", "mdi:numeric-3-circle-outline"),
+        AutodartsSensor(coordinator, "connection_status", "mdi:wifi-check"),
+        AutodartsSensor(coordinator, "status", "mdi:state-machine"),
+        AutodartsSensor(coordinator, "turn_score", "mdi:bullseye-arrow"),
+        AutodartsSensor(coordinator, "num_throws", "mdi:counter"),
+        AutodartsSensor(coordinator, "throw1", "mdi:numeric-1-circle-outline"),
+        AutodartsSensor(coordinator, "throw2", "mdi:numeric-2-circle-outline"),
+        AutodartsSensor(coordinator, "throw3", "mdi:numeric-3-circle-outline"),
     ]
 
     async_add_entities(sensors)
@@ -24,13 +23,15 @@ async def async_setup_entry(hass, entry, async_add_entities):
 class AutodartsSensor(CoordinatorEntity, SensorEntity):
     """Ein Sensor für Autodarts."""
 
-    def __init__(self, coordinator, key, name, icon):
+    def __init__(self, coordinator, key, icon):
         super().__init__(coordinator)
         self._key = key
-        self._name = name
         self._icon = icon
         self._attr_unique_id = f"{coordinator.entry.entry_id}_{key}"
         self._attr_has_entity_name = True
+        
+        # Das ist das Wichtigste: Wir sagen HA, welcher Schlüssel in der JSON genutzt werden soll
+        self._attr_translation_key = key
         
         self._attr_device_info = {
             "identifiers": {(DOMAIN, coordinator.entry.entry_id)},
@@ -40,12 +41,8 @@ class AutodartsSensor(CoordinatorEntity, SensorEntity):
         }
 
     @property
-    def name(self):
-        return self._name
-
-    @property
     def icon(self):
-        # Optional: Icon ändern wenn Offline
+        # Icon ändern wenn Offline (nur für Verbindungs-Sensor)
         if self._key == "connection_status" and self.state == "Offline":
             return "mdi:wifi-off"
         return self._icon
