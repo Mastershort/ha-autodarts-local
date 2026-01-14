@@ -3,10 +3,11 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 [![maintainer](https://img.shields.io/badge/maintainer-Mastershort-green?style=for-the-badge)](https://github.com/Mastershort)
 
-**[🇬🇧 English](#-english) | [🇩🇪 Deutsch](#-deutsch)**
+**[🇬🇧 English](#english) | [🇩🇪 Deutsch](#deutsch)**
 
 ---
 
+<a name="english"></a>
 ## 🇬🇧 English
 
 A local Home Assistant integration for [Autodarts.io](https://autodarts.io).
@@ -46,6 +47,7 @@ Click the button below to add this repository to HACS directly:
 
 ---
 
+<a name="deutsch"></a>
 ## 🇩🇪 Deutsch
 
 Eine lokale Home Assistant Integration für [Autodarts.io](https://autodarts.io).
