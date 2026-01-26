@@ -27,6 +27,7 @@ class AutodartsButton(ButtonEntity):
     def __init__(self, entry, key, icon, endpoint):
         self._key = key
         self._icon = icon
+        self._attr_unique_id = f"{entry.entry_id}_{key}"
         self._attr_has_entity_name = True
 
         self.api_endpoint = endpoint
