@@ -27,6 +27,11 @@
       "throw1": { "name": "Wurf 1" },
       "throw2": { "name": "Wurf 2" },
       "throw3": { "name": "Wurf 3" }
+    },
+    "button": {
+      "start_detection": { "name": "Erkennung Starten"},
+      "stop_detection": { "name": "Erkennung Stoppen"},
+      "reset_detection": { "name": "Erkennung Zurücksetzen"}
     }
   }
 }

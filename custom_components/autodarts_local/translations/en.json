@@ -27,6 +27,11 @@
       "throw1": { "name": "Throw 1" },
       "throw2": { "name": "Throw 2" },
       "throw3": { "name": "Throw 3" }
+    },
+    "button": {
+      "start_detection": { "name": "Start Detection"},
+      "stop_detection": { "name": "Stop Detection"},
+      "reset_detection": { "name": "Reset Detection"}
     }
   }
 }
