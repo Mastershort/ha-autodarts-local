@@ -14,7 +14,8 @@ async def async_setup_entry(hass, entry, async_add_entities):
     buttons = [
         AutodartsButton(entry, "start_detection", "mdi:play-circle", "/api/start", "PUT"),
         AutodartsButton(entry, "stop_detection", "mdi:stop-circle", "/api/stop", "PUT"),
-        AutodartsButton(entry, "reset_detection", "mdi:restore", "/api/reset", "POST")
+        AutodartsButton(entry, "reset_detection", "mdi:restore", "/api/reset", "POST"),
+        AutodartsButton(entry, "calibrate", "mdi:target", "/api/config/calibration/auto", "POST"),
     ]
 
     async_add_entities(buttons)
