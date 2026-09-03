@@ -24,6 +24,7 @@ This integration reads the raw status directly from your Autodarts Board Manager
 * 🎯 **Turn Score:** Shows the total score of the current 3 darts.
 * 1️⃣ **Individual Darts:** Sensors for every single throw (e.g., "T20", "S5").
 * ⚡ **Performance:** Zero cloud latency.
+* 🚀 **Board Actions:** Trigger simple board actions (start, stop, reset and calibrate).
 
 ### Installation
 
@@ -64,6 +65,7 @@ Diese Integration liest den Status direkt vom Autodarts Board Manager (Port 3180
 * 🎯 **Aufnahme-Punkte:** Zeigt die Punkte der aktuellen 3 Pfeile.
 * 1️⃣ **Einzelwürfe:** Sensoren für jeden einzelnen Pfeil (z.B. "T20", "S5").
 * ⚡ **Performance:** Keine Cloud-Verzögerung.
+* 🚀 **Einfache Aktionen am Board auslösen (Start, Stopp, Reset und Kalibrierung).**
 
 ### Installation
 

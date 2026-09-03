@@ -31,7 +31,8 @@
     "button": {
       "start_detection": { "name": "Start Detection"},
       "stop_detection": { "name": "Stop Detection"},
-      "reset_detection": { "name": "Reset Detection"}
+      "reset_detection": { "name": "Reset Detection"},
+      "calibrate": { "name": "Calibrate Board"}
     }
   }
 }

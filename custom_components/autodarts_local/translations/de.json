@@ -31,7 +31,8 @@
     "button": {
       "start_detection": { "name": "Erkennung Starten"},
       "stop_detection": { "name": "Erkennung Stoppen"},
-      "reset_detection": { "name": "Erkennung Zurücksetzen"}
+      "reset_detection": { "name": "Erkennung Zurücksetzen"},
+      "calibrate": { "name": "Board Kalibrieren" }
     }
   }
 }
